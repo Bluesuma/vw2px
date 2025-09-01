@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# VW to PX Converter - Скрипт для быстрого запуска
+# VW2PX - Скрипт для быстрого запуска
 # Использование: ./run_converter.sh [путь_к_проекту] [viewport] [dry_run]
 
-echo "🚀 VW to PX Converter - Быстрый запуск"
+echo "🚀 VW2PX - Быстрый запуск"
 echo "========================================"
 
 # Проверяем наличие Python
@@ -13,8 +13,8 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Проверяем наличие основного файла
-if [ ! -f "vw_to_px_converter.py" ]; then
-    echo "❌ Ошибка: Файл vw_to_px_converter.py не найден!"
+if [ ! -f "vw2px/converter.py" ]; then
+    echo "❌ Ошибка: Файл vw2px/converter.py не найден!"
     exit 1
 fi
 
@@ -34,7 +34,7 @@ echo "🔍 Режим: $([ -z "$DRY_RUN" ] && echo "Выполнение зам�
 echo ""
 
 # Запускаем конвертер
-python3 vw_to_px_converter.py --path "$PROJECT_PATH" --viewport "$VIEWPORT" $DRY_RUN
+python3 vw2px/converter.py --path "$PROJECT_PATH" --viewport "$VIEWPORT" $DRY_RUN
 
 echo ""
 echo "✅ Скрипт завершен!"

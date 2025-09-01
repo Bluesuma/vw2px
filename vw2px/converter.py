@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-VW to PX Converter
+VW2PX - Конвертер размеров из VW в PX
 Конвертер размеров из VW в PX для проектов Vue, React, Next.js и других
 """
+
+__version__ = "1.0.0"
 
 import os
 import re
@@ -207,13 +209,13 @@ class VWToPXConverter:
               help='Тип конвертации (пока поддерживается только vw-to-px)')
 def main(path: str, viewport: int, dry_run: bool, type: str):
     """
-    VW to PX Converter - Конвертер размеров для веб-проектов
+    vw2px Converter - Конвертер размеров для веб-проектов
     
     Поддерживаемые типы конвертации:
     - vw-to-px: Конвертация из VW в PX
     - px-to-vw: Конвертация из PX в VW (пока не реализовано)
     """
-    click.echo(f"{Fore.CYAN}🚀 VW to PX Converter")
+    click.echo(f"{Fore.CYAN}🚀 VW2PX - Конвертер VW в PX")
     click.echo(f"{Fore.CYAN}=" * 50)
     click.echo(f"📁 Проект: {path}")
     click.echo(f"🖥️  Viewport: {viewport}px")
